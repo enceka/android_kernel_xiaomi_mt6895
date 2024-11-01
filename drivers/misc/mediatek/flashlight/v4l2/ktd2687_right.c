@@ -749,7 +749,7 @@ static int ktd2687_ioctl(unsigned int cmd, unsigned long arg)
 		pr_info("FLASH_IOC_SET_ONOFF(%d): %d\n",
 				channel, (int)fl_arg->arg);
 		if ((int)fl_arg->arg) {
-			ktd2687_torch_brt_ctrl(ktd2687_flash_data, channel, 120000);
+			ktd2687_torch_brt_ctrl(ktd2687_flash_data, channel, 25000);
 			ktd2687_flash_data->led_mode = V4L2_FLASH_LED_MODE_TORCH;
 			ktd2687_mode_ctrl(ktd2687_flash_data);
 			ktd2687_enable_ctrl(ktd2687_flash_data, channel, true);
