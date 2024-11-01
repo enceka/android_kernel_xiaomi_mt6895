@@ -43,6 +43,10 @@
 #if defined(CONFIG_TARGET_PRODUCT_XAGA)
 #include "../../../misc/hwid/hwid.h"
 #endif
+#if defined(CONFIG_TARGET_PRODUCT_PEARL)
+#include "../../../misc/hwid/hwid.h"
+#endif
+
 //#include <mt-plat/charger_type.h>
 
 #define LN8000_DUAL_CONFIG
