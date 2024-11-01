@@ -72,6 +72,9 @@
 #if defined(CONFIG_TARGET_PRODUCT_XAGA)
 #include "../../../misc/hwid/hwid.h"
 #endif
+#if defined(CONFIG_TARGET_PRODUCT_PEARL)
+#include "../../../misc/hwid/hwid.h"
+#endif
 
 static struct platform_driver mtk_charger_driver;
 static struct mtk_charger *pinfo = NULL;
