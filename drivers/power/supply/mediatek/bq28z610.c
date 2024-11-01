@@ -2435,7 +2435,7 @@ static int fg_probe(struct i2c_client *client, const struct i2c_device_id *id)
 	product_name=DAUMIER;
 #endif
 
-#if defined(CONFIG_TARGET_PRODUCT_PEARL
+#if defined(CONFIG_TARGET_PRODUCT_PEARL)
         product_name=PEARL;
 #endif
 
