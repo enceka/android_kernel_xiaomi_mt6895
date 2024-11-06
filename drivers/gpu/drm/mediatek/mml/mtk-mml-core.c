@@ -1444,9 +1444,6 @@ static void core_config_task(struct mml_task *task)
 	if (cfg->dual)
 		cfg->task_ops->queue(task, 1);
 
-	/* hold config in this task to avoid config release before call submit_done */
-	cfg->cfg_ops->get(cfg);
-
 	/* ref count to 2 thus destroy can be one of
 	 * submit done and frame done
 	 */
@@ -1461,7 +1458,6 @@ static void core_config_task(struct mml_task *task)
 
 done:
 	mml_mmp(config, MMPROFILE_FLAG_END, jobid, 0);
-	cfg->cfg_ops->put(cfg);
 	mml_trace_end();
 }
 
@@ -1542,12 +1538,9 @@ void mml_core_deinit_config(struct mml_frame_config *cfg)
 
 	/* make command, engine allocated private data */
 	for (pipe = 0; pipe < MML_PIPE_CNT; pipe++) {
-		if (cfg->path[pipe]) {
-			for (i = 0; i < cfg->path[pipe]->node_cnt; i++)
-				kfree(cfg->cache[pipe].cfg[i].data);
-		}
-		if (cfg->tile_output[pipe])
-			destroy_tile_output(cfg->tile_output[pipe]);
+		for (i = 0; i < cfg->path[pipe]->node_cnt; i++)
+			kfree(cfg->cache[pipe].cfg[i].data);
+		destroy_tile_output(cfg->tile_output[pipe]);
 	}
 	core_destroy_wq(&cfg->wq_done);
 }

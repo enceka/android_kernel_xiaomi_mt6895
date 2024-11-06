@@ -201,3 +201,4 @@ static inline u32 mml_color_get_min_uv_size(enum mml_color c,
 }
 
 #endif	/* __MTK_MML_COLOR_H__ */
+

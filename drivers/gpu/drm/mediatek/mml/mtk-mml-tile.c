@@ -476,3 +476,4 @@ void dump_tile_output(struct mml_task *task, u32 pipe_idx)
 	for (i = 0; i < tile_cnt; i++)
 		dump_tile_config(&output->tiles[i]);
 }
+

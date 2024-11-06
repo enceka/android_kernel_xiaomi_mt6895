@@ -318,7 +318,7 @@ static s32 aal_tile_prepare(struct mml_comp *comp, struct mml_task *task,
 		func->full_size_x_in = in_crop_w;
 		func->full_size_y_in = in_crop_h;
 	} else {
-		func->full_size_x_in = src->width;
+ 		func->full_size_x_in = src->width;
 		func->full_size_y_in = src->height;
 	}
 	func->full_size_x_out = func->full_size_x_in;
@@ -1187,8 +1187,6 @@ static void aal_task_done_readback(struct mml_comp *comp, struct mml_task *task,
 	if (vcp) {
 		mml_pq_put_vcp_buf_offset(task, engine, task->pq_task->aal_hist[pipe]);
 		cmdq_vcp_enable(false);
-		kfree(task->pq_task->aal_hist[pipe]);
-		task->pq_task->aal_hist[pipe] = NULL;
 	} else
 		mml_pq_put_readback_buffer(task, pipe, task->pq_task->aal_hist[pipe]);
 exit:
