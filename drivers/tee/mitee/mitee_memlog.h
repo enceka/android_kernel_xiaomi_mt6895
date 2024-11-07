@@ -71,3 +71,4 @@ struct mitee_memlog_state {
 int mitee_memlog_probe(struct platform_device *pdev);
 int mitee_memlog_remove(struct platform_device *pdev);
 #endif
+

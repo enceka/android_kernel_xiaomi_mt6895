@@ -477,3 +477,4 @@ int tz_log_remove(struct platform_device *pdev)
 
 	return 0;
 }
+

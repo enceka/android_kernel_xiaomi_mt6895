@@ -28,7 +28,7 @@ $(info "whf ccflags-y=$(ccflags-y)")
 subdir-ccflags-y  += \
 	-I$(srctree)/$(src)/tz_dcih \
 	-I$(srctree)/$(src)/public \
-	-I$(srctree)/$(src)/tz_driver/include
+	-I$(srctree)/$(src)/tz_driver/include 
 
 ifneq ($(filter y m, $(CONFIG_MTPROF)),)
 subdir-ccflags-y += -I$(srctree)/drivers/misc/mediatek/mtprof/

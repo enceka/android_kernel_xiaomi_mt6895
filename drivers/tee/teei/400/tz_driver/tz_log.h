@@ -63,3 +63,4 @@ int init_tlog_comp_fn(void);
 void teei_notify_log_fn(void);
 int teei_change_log_status(unsigned long new_status);
 #endif
+

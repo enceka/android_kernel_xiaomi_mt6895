@@ -288,3 +288,5 @@ int register_ut_irq_handler(int irq)
 	return request_irq(irq, ut_drv_irq_handler,
 				0, "tz_drivers_service", NULL);
 }
+
+

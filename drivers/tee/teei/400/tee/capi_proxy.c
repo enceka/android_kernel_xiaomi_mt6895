@@ -426,3 +426,4 @@ int tee_ioctl_capi_proxy(struct tee_context *ctx,
 
 	return ret;
 }
+

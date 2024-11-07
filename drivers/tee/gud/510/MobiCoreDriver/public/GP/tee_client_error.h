@@ -117,3 +117,4 @@
 #define TEEC_ERROR_STORAGE_NO_SPACE       ((uint32_t)0xFFFF3041)
 
 #endif /* TEE_CLIENT_ERROR_H */
+

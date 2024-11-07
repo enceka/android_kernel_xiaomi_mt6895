@@ -412,3 +412,4 @@ exit:
 		tz_free(temp_buffer, TEMP_BUFFER_TEST_SIZE);
 	return case_res;
 }
+
